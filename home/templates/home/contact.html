@@ -1,21 +1,23 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
-{% block container %}
-{% block title %}LMS - Contact {% endblock %}
-<h1>Contact Form</h1>
+{% block title %}
+    Contact
+{% endblock %}
 
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">Add message</button>
-</form>
+
+
+{% block content %}
+    <h1>Contact Form</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit">Add message</button>
+    </form>
 {% endblock %}
 
 {% block aside %}
-{{ block.super }}
-    <h3>Działa</h3>
-    {{ block.super }}
-    {{ block.super }}
 {% endblock %}
 
 
