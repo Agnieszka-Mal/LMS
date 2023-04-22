@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block container %}
+{% block title %}LMS - Contact {% endblock %}
+<h1>Contact Form</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Add message</button>
+</form>
+{% endblock %}
+
+{% block aside %}
+{{ block.super }}
+    <h3>Działa</h3>
+    {{ block.super }}
+    {{ block.super }}
+{% endblock %}
+
+
