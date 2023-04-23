@@ -7,6 +7,7 @@
    -Następnie dodać do settings.py - INSTALLED_APPS
  2. Czy potrzebuje dane?
  - stworzyć modele w models.py(Django Models ORM)
+ - czy potrzebuje custom managera
  - robię migracje: `python.manage.py makemigrations <app lebel>`
  - Aplikuje zmianę scheme ab `python manage.py migrate <app lebel>`
  - piszę Unit tests
