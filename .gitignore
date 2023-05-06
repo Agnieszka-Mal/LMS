@@ -3,5 +3,10 @@ venv
 **/*.pyc
 
 .vscode
+.idea
+
+media/courses
+media/files
+media/images
 .
 
