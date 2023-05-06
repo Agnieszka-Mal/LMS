@@ -36,7 +36,7 @@ def login_user_view(request):
                 if user.is_active:
                     login(request, user)
                     messages.add_message(request, messages.SUCCESS, f"You are logged in. Hello {username}")
-                    return redirect(reverse_lazy('home:home'))
+                    return redirect(request.GET.get('next', reverse('home:home')))
     else:
         form = forms.LoginForm()
     return render(request, 'users/login.html', {'form': form})
